@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "vue-tsc --noEmit --project tsconfig.app.json && vite build --config vite.lib.config.ts && vue-tsc -p tsconfig.lib.json",
-
+		"prepublishOnly": "npm run build",
 		"preview": "vite preview"
 	},
 	"main": "./dist/vue-dialog.cjs",

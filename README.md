@@ -19,7 +19,14 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import { DialogPlugin } from '@codeinklingon/vue-dialog';
 
+// Without router
 createApp(App).use(DialogPlugin).mount('#app');
+
+// With router — blocks navigation while a dialog is open
+import { createRouter, createWebHistory } from 'vue-router';
+
+const router = createRouter({ history: createWebHistory(), routes: [] });
+createApp(App).use(DialogPlugin, { router }).use(router).mount('#app');
 ```
 
 ### 2. Add the `<Dialogs />` component to your app root
