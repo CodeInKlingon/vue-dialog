@@ -1,0 +1,20 @@
+{
+	"extends": "./tsconfig.app.json",
+	"compilerOptions": {
+		"noEmit": false,
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		"outDir": "dist",
+		"declarationDir": "dist"
+	},
+	"include": [
+		"src/vite-env.d.ts",
+		"src/index.ts",
+		"src/plugin.ts",
+		"src/errors.ts",
+		"src/services/dialogService.ts",
+		"src/composables/useDialog.ts",
+
+		"src/components/DialogContainer.vue"
+	]
+}
