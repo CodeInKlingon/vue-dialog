@@ -1,11 +1,13 @@
-# vue-dialog-service
+# @codeinklingon/vue-dialog
+
+[![npm](https://img.shields.io/npm/v/@codeinklingon/vue-dialog)](https://www.npmjs.com/package/@codeinklingon/vue-dialog)
 
 A type-safe dialog service for Vue 3. Provides a programmatic dialog API with compile-time emit enforcement.
 
 ## Installation
 
 ```bash
-npm install vue-dialog-service
+npm install @codeinklingon/vue-dialog
 ```
 
 ## Usage
@@ -15,7 +17,7 @@ npm install vue-dialog-service
 ```ts
 import { createApp } from 'vue';
 import App from './App.vue';
-import { DialogPlugin } from 'vue-dialog-service';
+import { DialogPlugin } from '@codeinklingon/vue-dialog';
 
 createApp(App).use(DialogPlugin).mount('#app');
 ```
@@ -56,7 +58,7 @@ Components without these emits will be rejected at compile time.
 ### 4. Open a dialog
 
 ```ts
-import { useDialog } from 'vue-dialog-service';
+import { useDialog } from '@codeinklingon/vue-dialog';
 import MyDialog from './MyDialog.vue';
 
 const dialog = useDialog();
@@ -87,10 +89,6 @@ Rejects all open dialogs.
 
 ### `dialogService.hasOpenDialogs()` → `boolean`
 
-### `defineDialogComponent(component)` → `component`
-
-Identity function. In dev mode, warns at runtime if the component is missing `resolve`/`reject` emits.
-
 ### `DialogCancelledError`
 
 Error class used when dialogs are rejected non-explicitly.
@@ -101,7 +99,6 @@ Error class used when dialogs are rejected non-explicitly.
 |---------|-------------|
 | `npm run dev` | Start demo app dev server |
 | `npm run build` | Build library |
-| `npm run build:app` | Build demo app |
 
 ## License
 
